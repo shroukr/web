@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body {
+            background-color: rgb(207, 247, 132);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: 80px auto auto;
+            
+        }
+        .grid-item {
+            border: 1px solid #000;
+            padding: 40px; 
+            text-align: center;
+        }
+            
+    
+        .header {
+            grid-column: 1 / span 3; 
+            grid-row: 1 / span 2;
+            background-color:rgb(255, 210, 217);
+            color: white;
+            
+        }
+        .pink-i {
+        background-color: rgb(214, 108, 173);
+        color: white;
+
+        
+         }
+         .pur-i {
+            background-color: rgb(243, 162, 243);
+            width: 500px;
+            color: white;
+
+         }
+         .pik-i {
+            background-color: rgb(211, 102, 138);
+            color: white;
+
+         }
+         .pi-i{
+            background-color:rgb(248, 191, 86);
+            width: 150px;
+            color: white;
+
+         }
+         .kl-i {
+            background-color:rgb(248, 191, 86);
+            width: 150px;
+            color: white;
+
+         }
+         .jk-i {
+            background-color:rgb(248, 191, 86);
+            width: 150px;
+            color: white;
+
+         }
+         .lk-i {
+            background-color:rgb(248, 191, 86);
+            width: 150px;
+            padding-left:20px ;
+            color: white;
+
+         }
+        .group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            grid-column: 1 / span 3;
+            grid-row: 3;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header"> <b>Header </b></div>
+        <div class="grid-item pink-i">Left sidebar</div>
+        <div class="grid-item pur-i">Main content</div>
+        <div class="grid-item pik-i">Right sidebar</div>
+    </div>
+    <div class="group"> <!-- تحديد مجموعة العناصر رقم 4 و 5 و 6 و 7 -->
+        <div class="grid-item pi-i"><b>Footer 1</b></div>
+        <div class="grid-item kl-i"><b>Footer 2</b></div>
+        <div class="grid-item jk-i"><b>Footer 3</b></div>
+        <div class="grid-item lk-i"><b>Footer 4</b></div>
+    </div>
+</body>
+</html>
+

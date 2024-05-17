@@ -1,0 +1,77 @@
+حسنًا، يمكننا تغيير لون كل عنصر في الgrid بشكل فردي. سأقوم بتحديد ألوان مختلفة لكل عنصر.
+
+هذا هو الكود المحدث:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* تحديد 3 أعمدة متساوية */
+            grid-template-rows: 80px auto auto; /* تحديد ارتفاع أكبر لل header والصفوف الأخرى تأخذ ارتفاعًا تلقائيًا */
+            
+        }
+        .grid-item {
+            border: 1px solid #000;
+            padding: 40px; /* زيادة حجم المربعات */
+            text-align: center;
+        }
+            
+    
+        .header {
+            grid-column: 1 / span 3; /* تأخذ ال header المساحة الكاملة للأعمدة */
+            grid-row: 1 / span 2; /* تأخذ ال header مساحتي صف في الصفوف */
+            background-color:rgb(255, 210, 217);
+            color: white;
+            
+        }
+        .group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* تحديد 4 أعمدة متساوية */
+            gap: 5px; /* تحديد المسافة بين العناصر */
+            grid-column: 1 / span 3; /* تأخذ المجموعة المساحة الكاملة للأعمدة */
+            grid-row: 3; /* تأخذ المجموعة مساحة الصف الثالث */
+            padding-top: 50px;
+        }
+
+        /* تعيين ألوان مختلفة لكل عنصر */
+        .grid-item:nth-child(1) {
+            background-color: rgb(181, 181, 233);
+            color: white;
+        }
+
+        .grid-item:nth-child(2) {
+            background-color: red;
+            color: white;
+        }
+
+        .grid-item:nth-child(3) {
+            background-color: green;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header"> <b>Header </b></div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+    <div class="group"> <!-- تحديد مجموعة العناصر رقم 4 و 5 و 6 و 7 -->
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+    </div>
+</body>
+</html>
+```
+
+بهذا التعديل، تم تحديد ألوان مختلفة لكل عنصر: العنصر 1 بلون أزرق، العنصر 2 بلون أحمر، والعنصر 3 بلون أخضر.
